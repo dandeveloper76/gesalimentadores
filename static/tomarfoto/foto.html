@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tomar foto con el móvil y guardar en el servidor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> 
+  <script type="text/javascript">
+    function tomarFoto() {
+      var input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.capture = 'camera';
+
+      input.onchange = function(e) {
+        var file = e.target.files[0];
+
+        // Crear un objeto FormData
+        var formData = new FormData();
+        formData.append('image', file);
+
+        // Enviar la imagen al servidor utilizando una solicitud AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'guardar_imagen.php', true);
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            alert('La imagen se ha guardado exitosamente.');
+          } else {
+            alert('Ha ocurrido un error al guardar la imagen.');
+          }
+        };
+        xhr.send(formData);
+      };
+
+      input.click();
+    }
+  </script>
+</head>
+<style>
+body { 
+background-image: url("fondomobil-1.jpg");
+background-size: 100%; 
+background-repeat: no-repeat;      
+}
+@media (min-width:600px) { body {display:none;} }
+</style>
+<body>
+<div class="container">
+  <div class="row p-4">
+  <!-- <center><img src="lente.gif" width="50%"/></center> -->
+  <div style="height:25px;"></div>
+  <a class="text-center" href="" class="" onclick="tomarFoto()"><img src="lente.gif" width="50%"/></a>
+  <p style="text-align:center;font-size:12px; margin-top:15px;"><img src="flecha.png" width="25%"/></p>
+  <p style="text-align:center;font-size:12px; margin-top:5px;">Click sobre la lent</p>
+  </div>
+</div>
+</body>
+</html>

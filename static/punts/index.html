@@ -1,0 +1,354 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.6">
+	<title>Punts gats</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://projects.davidlynch.org/maphilight/jquery.maphilight.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.map').maphilight({
+		   fade: false,	   
+		   });
+	});</script> 
+<script src="js/jquery.rwdImageMaps.min.js"></script>	
+</head>
+<style>
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 40px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+ 
+  .a area::before { 
+  content:"Mossos esquadra";
+  font-family: Arial;
+  font-size:34px;
+  background-color: #000;
+  color: #fff;
+  }
+  .b area::before { 
+  content:"Entrada 33";
+  font-family: Arial;
+  font-size:34px;
+  background-color: #000;
+  color: #fff;
+  }
+  .c area::before { 
+  content:"Ambulancias";
+  font-family: Arial;
+  font-size:34px;
+  background-color: #000;
+  color: #fff;
+  }
+  .d area::before { 
+  content:"Granja";
+  font-family: Arial;
+  font-size:34px;
+  background-color: #000;
+  color: #fff;
+  }
+  .e area::before { 
+  content:"ConcaActiva";
+  font-family: Arial;
+  font-size:34px;
+  background-color: #000;
+  color: #fff;
+  }
+  
+  .map { border: 0px solid #000;}
+  .pyramid {
+  margin: 0 auto;
+  width: 90%;
+  }
+  img[usemap] {
+	border: none;
+	height: auto;
+  max-width: 100%;
+	width: auto;
+}  
+</style>
+<body>
+<div class="pyramid">
+<center><img usemap="#image-map" class="map" src="Puntsaliment.png" width="" ></center>
+<br>
+<map name="image-map">
+	<area target="_top" alt="Zona 33" title="Zona 33" href="#" coords="398,554,634,421" shape="rect" id="myBtn">
+    <area target="_top" alt="Ambulancies" title="" href="#" coords="702,554,845,497" shape="rect" id="myBtn2">
+    <area target="_top" alt="Pamelacasa" title="" href="#" coords="702,432,766,480" shape="rect" id="myBtn3">
+    <area target="_top" alt="ConcaActiva" title="" href="#" coords="686,76,817,180" shape="rect" id="myBtn4">
+    <area target="_top" alt="ConcaActivaGranja" title="" href="#" coords="799,205,917,343" shape="rect" id="myBtn5">
+    <area target="_top" alt="Mezquita" title="" href="#" coords="267,114,406,316" shape="rect" id="myBtn6">
+</map>
+<div class="text-center"><a id="myBtn7" class="btn btn-warning" href="#">Veure zones marcadas</a></div>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<!-- <button id="myBtn">Open Modal</button> -->
+
+<!-- The Modal -->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-md-6">
+	<p><strong>Zona 33</strong><hr></p>
+	<p><strong>Ubicació:</strong> Carrer Regne d'Arago, 33 i Punt barrera Mossos d'Esquadra</p>
+	<p><strong>Gats que tenim al punt:</strong></p>
+	<p>4 gats (3 mascles i 1 Femella) fixes al punt de alimentació</p>
+	<p><strong>Esporàdics:</strong> 4 sense definir sexe</p>
+	<p><img src="adjuntos/princesa.jpg" width="100%"/></p>
+	</div>	
+	<div class="col-md-6">
+	<p><img src="adjuntos/gardfield.jpeg" width="100%"/></p>
+	</div>
+	</div>
+  </div>
+
+</div>
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-md-6">
+	<p><strong>Zona Ambulancies</strong><hr></p>
+	<p><strong>Ubicació:</strong> Carrer de Morella</p>
+	<p><strong>Gats que tenim al punt:</strong></p>
+	<p>5 gats (3 mascles i 2 Femella) fixes al punt de alimentació</p>
+	<p><strong>Esterilitzats:</strong> 1 mascle i 1 femella</p>
+	<p><img src="adjuntos/1683890035519.jpg" width="100%"/></p>
+	<p><img src="adjuntos/1683890035502.jpg" width="100%"/></p>
+	</div>	
+	<div class="col-md-6">
+	<p><img src="adjuntos/1683890035510.jpg" width="100%"/></p>	
+	<p><img src="adjuntos/ambulancias.jpg" width="100%"/></p>
+	</div>
+	</div>
+  </div>
+
+</div>
+<div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-md-6">
+	<p><strong>Zona Pamela casa</strong><hr></p>
+	<p><strong>Ubicació:</strong> Carrer Regne de Valencia</p>
+	<p><strong>Gats que tenim al punt:</strong></p>
+	<p>37 gats (6 mascles i 12 Femella) fixes al punt de alimentació dels quals 19 son cadells de 0 a 2 mesos.</p>
+	<p><strong>Esterilitzats:</strong> 1 femella</p>
+	</div>	
+	<div class="col-md-6"><p></p>
+	
+	</div>
+	</div>
+  </div>
+
+</div>
+<div id="myModal4" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-md-6">
+	<p><strong>Zona Conca Activa</strong><hr></p>
+	<p><strong>Ubicació:</strong> Carrer de Daroca</p>
+	<p><strong>Gats que tenim al punt:</strong></p>
+	<p>12 gats (7 mascles i 5 Femella) fixes al punt de alimentació</p>
+	<p><strong>Esterilitzats:</strong> 3 femelles</p>
+	</div>	
+	<div class="col-md-6">
+	
+	</div>
+	</div>
+  </div>
+
+</div>
+<div id="myModal5" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-md-6">
+	<p><strong>Zona Conca Activa Fabrica</strong><hr></p>
+	<p><strong>Ubicació:</strong> Carrer de Capdepera</p>
+	<p><strong>Gats que tenim al punt compartint amb <i style="color:red;">ConcaActiva</i>:</strong></p>
+	<p>12 gats (7 mascles i 5 Femella) fixes al punt de alimentació</p>
+	<p><strong>Esterilitzats:</strong> 3 femelles</p>
+	</div>	
+	<div class="col-md-6">
+	
+	</div>
+	</div>
+  </div>
+
+</div>
+<div id="myModal6" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-md-6">
+	
+	</div>	
+	<div class="col-md-6">
+	
+	</div>
+	</div>
+  </div>
+
+</div>
+<div id="myModal7" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+	<div class="col-lg-12">
+	<p><img src="puntsrec.png" width="100%" height="auto"/></p>
+	</div>	
+	</div>
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
+var modal5 = document.getElementById("myModal5");
+var modal6 = document.getElementById("myModal6");
+var modal7 = document.getElementById("myModal7");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+var btn5 = document.getElementById("myBtn5");
+var btn6 = document.getElementById("myBtn6");
+var btn7 = document.getElementById("myBtn7");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close")[1];
+var span3 = document.getElementsByClassName("close")[2];
+var span4 = document.getElementsByClassName("close")[3];
+var span5 = document.getElementsByClassName("close")[4];
+var span6 = document.getElementsByClassName("close")[5];
+var span7 = document.getElementsByClassName("close")[6];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+btn4.onclick = function() {
+  modal4.style.display = "block";
+}
+btn5.onclick = function() {
+  modal5.style.display = "block";
+}
+btn6.onclick = function() {
+  modal6.style.display = "block";
+}
+btn7.onclick = function() {
+  modal7.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+span4.onclick = function() {
+  modal4.style.display = "none";
+}
+span5.onclick = function() {
+  modal5.style.display = "none";
+}
+span6.onclick = function() {
+  modal6.style.display = "none";
+}
+span7.onclick = function() {
+  modal7.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal || event.target == modal2 || event.target == modal3 || event.target == modal4 || event.target == modal5 || event.target == modal6 || event.target == modal7) {
+    modal.style.display = 'none';
+    modal2.style.display = 'none';
+	modal3.style.display = 'none';
+	modal4.style.display = 'none';
+	modal5.style.display = 'none';
+	modal6.style.display = 'none';
+	modal7.style.display = 'none';
+  }
+}
+
+</script>
+<script>$('img[usemap]').rwdImageMaps();</script>
+</body>
+</html>
